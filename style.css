@@ -70,7 +70,8 @@ body {
 .card--info {
     margin-top: 2em;
     border-radius: 10px;
-    padding: 1em .75em;
+    font-size: .75rem;
+    padding: .5em .37em;
     display: grid;
     grid-template-columns: 20% 35% auto;
     grid-template-areas: 
@@ -130,7 +131,7 @@ body {
 
 @media (min-width: 800px) {
     .card--body {
-        padding: 1em 3.5em;
+        padding: 1em 3em;
     }    
 }
 
