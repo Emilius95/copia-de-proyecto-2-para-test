@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 16px;
+}
+
+:root {
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+}
+
+body {
+    background-image: url("images/pattern-background-desktop.svg");
+    max-height: 100vh;
+    background-size: cover ;
+    background-repeat: no-repeat;
+}
+
+.container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 25px;
+    max-width: 425px;
+    min-width: 375px;
+    background-color: var(--very-pale-blue);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+/* Card image  */
+
+.card--image {
+    width: 100%;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    display: block;
+}
+
+/* Card body */
+
+.card--body {
+    padding: 1em 2.5em;
+    background-color: blue;
+}
+
+.card--title {
+    margin-top: .75em;
+    font-size: 1.75rem;
+    font-weight: 900;
+    text-align: center;
+}
+
+.card--description {
+    margin-top: 1em;
+    color: var(--desaturated-blue);
+    text-align: center;
+    font-weight: 500;
+    line-height: 1.5rem;
+}
+
+
+/* Card info  */
+
+.card--info {
+    margin-top: 2em;
+    display: grid;
+    grid-template-columns: 20% 35% auto;
+    grid-template-areas: 
+        "left top right"
+        "left bottom right"
+    ;
+    align-items: center;
+}
+
+.card--icon {
+    grid-area: left;
+    padding-left: .5em;
+}
+.card--plan {
+    grid-area: top;
+    font-weight: 700;
+}
+.card--price {
+    grid-area: bottom;
+    color: var(--desaturated-blue);
+}
+.card--link {
+    grid-area: right;
+    margin-left: auto;
+    padding-right: 1em;
+    color: var(--bright-blue);
+    font-weight: 900;
+}
+
+/* Card footer  */
+
+.card--pay, .card--cancel {
+    margin-top: 2em;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+}
+
+.card--pay {
+    background-color: var(--bright-blue);
+    color: var(--very-pale-blue);
+    padding: .75em 3.5em;
+    border-radius: 15px;
+    box-shadow: 0px 10px 16px 0px rgba(56, 42, 225, 0.41);
+}
+
+.card--cancel {
+    color:var(--desaturated-blue);
+    font-weight: 900;
+    margin-bottom: 1em;
+}
+
+@media (min-width: 800px) {
+    .card--body {
+        padding: 1em 3.5em;
+    }    
+}
+
